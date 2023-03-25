@@ -14,6 +14,7 @@ const carRouter = require('./routes/cars-routes');
 const commentRouter = require('./routes/comments-routes');
 const feedRouter = require('./routes/feed-routers');
 const orderRouter = require('./routes/order-routers');
+const userRouter = require('./routes/user-routes');
 
 //Middleware
 app.use(bodyparser.urlencoded({ extended: false }));
@@ -38,6 +39,7 @@ app.use(`/api/v1/cars`, carRouter);
 app.use(`/api/v1/comments`, commentRouter);
 app.use(`/api/v1/feeds`, feedRouter);
 app.use(`/api/v1/orders`, orderRouter);
+app.use(`/api/v1/users`, userRouter);
 
 
 //connecting to database
