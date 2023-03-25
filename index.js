@@ -10,6 +10,7 @@ const errorMiddleWare = require("./middleware/error");
 
 //Routes import
 const blogRouter = require('./routes/blog-routes');
+const carRouter = require('./routes/cars-routes');
 
 
 //Middleware
@@ -31,6 +32,7 @@ app.get(`/`, (req, res) => {
 
 //Using Routers
 app.use(`/api/v1/blogs`, blogRouter);
+app.use(`/api/v1/cars`, carRouter);
 
 
 
