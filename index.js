@@ -11,7 +11,7 @@ const errorMiddleWare = require("./middleware/error");
 //Routes import
 const blogRouter = require('./routes/blog-routes');
 const carRouter = require('./routes/cars-routes');
-
+const commentRouter = require('./routes/comments-routes');
 
 //Middleware
 app.use(bodyparser.urlencoded({ extended: false }));
@@ -33,7 +33,7 @@ app.get(`/`, (req, res) => {
 //Using Routers
 app.use(`/api/v1/blogs`, blogRouter);
 app.use(`/api/v1/cars`, carRouter);
-
+app.use(`/api/v1/comments`, commentRouter);
 
 
 //connecting to database
